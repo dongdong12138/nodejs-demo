@@ -1,0 +1,36 @@
+<title>首页</title>
+<link rel="stylesheet" href="/style.css">
+<h5>您的账户余额是 <span id="amount">&&&amount&&&</span></h5>
+<button id="button">打钱</button>
+<script>
+  button.addEventListener('click', (e) => {
+    let script = document.createElement('script')
+    script.src = 'http://alipay.com/pay?number=10000&user=fangfang'
+    document.body.appendChild(script)
+    script.onload = function (e) {
+      e.currentTarget.remove()
+    }
+    script.onerror = function (e) {
+      e.currentTarget.remove()
+      alert('failed')
+    }
+
+
+
+
+
+
+
+
+    // let image = document.createElement('img')
+    // image.src = '/pay'
+    // image.onload = function () {
+    //   alert('打款成功')
+    //   amount.innerText = amount.innerText - 1
+    // }
+    // image.onerror = function () {
+    //   alert('打款失败')
+    // }
+  })
+</script>
+
